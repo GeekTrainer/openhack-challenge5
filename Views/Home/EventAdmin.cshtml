@@ -1,0 +1,128 @@
+﻿@model UserViewModel
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Admin Message Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <title>Alpine Ski House - Admin</title>
+    <link href="./img/favicon.png" rel="shortcut icon" />
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div id="alpine-container" class="container">
+
+        <header id="alpine-header" class="container-fluid">
+            <nav id="alpine-header-nav" class="row">
+                <div id="alpine-header-logo" class="col-xs-12 col-sm-8">
+                    <img src="./img/logo.png" alt="Alpine Ski House" />
+                    <a href="./index.html">Alpine Ski House</a>
+                </div>
+                <div id="alpine-header-links" class="col-xs-12 col-sm-4 pull-right">
+                    <a href="./About.html">About</a>
+                    <a href="./Faq.html">FAQ</a>
+                </div>
+            </nav>
+        </header>
+
+        <div id="alpine-admin" class="row alpine-content">
+            <hr class="line-3x line-dark" />
+            <hr class="line-2x line-light" />
+            <hr class="line-1x line-light" />
+            <section class="col-xs-12">
+                <header>
+                    <h3>Welcome, @Model.Name</h3>
+                    <h1>Alpine Ski House Admin Dashboard</h1>
+                </header>
+                <div class="section-body">
+
+                    <div class="container">
+                        <h2>Send Message</h2>
+                        <form method="POST" enctype="multipart/form-data" action="/">
+                            <div class="form-group">
+                                <label for="simpleMessage">Message:</label>
+                                <textarea class="form-control" id="simpleMessage" placeholder="Enter Message Here" name="simpleMessage"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                    </div>
+                    <div class="container">
+                        <h2>Send Cancellation Event</h2>
+                        <form method="POST" enctype="multipart/form-data" action="/">
+                            <div class="form-group">
+                                <label for="cancellationMessage">Cancellation Message:</label>
+                                <textarea class="form-control" id="cancellationMessage" placeholder="Enter Cancellation Message Here" name="cancellationMessage"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="eventId">Event Id:</label>
+                                <input type="number" class="form-control" id="eventId" placeholder="Enter Event ID" name="eventId">
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                    </div>
+                    <div class="container">
+                        <h2>Send Secret Event</h2>
+                        <form method="POST" enctype="multipart/form-data" action="/">
+                            <div class="form-group">
+                                <label for="secretEventMessage">Secret Event Message:</label>
+                                <textarea class="form-control" id="secretEventMessage" placeholder="Enter Secret Event Message Here" name="secretEventMessage"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="bandName">Band Name:</label>
+                                <input type="text" class="form-control" id="bandName" placeholder="Enter Band's Name" name="bandName">
+                            </div>
+                            <div class="form-group">
+                                <label for="genre">Genre:</label>
+                                <input type="text" class="form-control" id="genre" placeholder="Enter Band's Genre" name="genre">
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Band Description:</label>
+                                <textarea class="form-control" id="description" placeholder="Enter Band's Description" name="description"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="stage">Stage:</label>
+                                <input type="text" class="form-control" id="stage" placeholder="Enter Stage Name (e.g. 'Dev')" name="stage">
+                            </div>
+                            <div class="form-group">
+                                <label for="imageUrl">Image Url:</label>
+                                <input type="url" class="form-control" id="imageUrl" placeholder="Enter Band Image URL (including http(s))" name="imageUrl">
+                            </div>
+                            <div class="form-group">
+                                <label for="date">Date:</label>
+                                <input type="text" class="form-control" id="date" placeholder="Enter Date (e.g. 'October 18')" name="date">
+                            </div>
+                            <div class="form-group">
+                                <label for="day">Day:</label>
+                                <input type="text" class="form-control" id="day" placeholder="Enter Day (e.g. 'Friday')" name="day">
+                            </div>
+                            <div class="form-group">
+                                <label for="datetime">Start Time:</label>
+                                <input type="text" class="form-control" id="startTime" placeholder="Enter Start Time (e.g. '1:00 PM')" name="startTime">
+                            </div>
+                            <div class="form-group">
+                                <label for="endTime">End Time:</label>
+                                <input type="text" class="form-control" id="endTime" placeholder="Enter End Time (e.g. '2:30 PM')" name="endTime">
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

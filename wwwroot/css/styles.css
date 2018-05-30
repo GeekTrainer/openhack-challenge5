@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600,700');
+
+/* Common -------------------------------------------------- */
+body {
+    background-color: rgba(255, 255, 255, 0.0);
+    margin: 0;
+    font-family: "Montserrat", Helvetica, Arial, serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 12px;
+    color: rgba(133, 133, 133, 1.0);
+    line-height: 15px;
+}
+
+/* Header -------------------------------------------------- */
+#alpine-header {
+    width: 290px;
+    margin: 0px auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+#alpine-header a {
+    color: rgba(128, 128, 128, 1.0);
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 0px 5px;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 30px;
+}
+#alpine-header-nav {
+    height: 60px;
+}
+#alpine-header-logo {
+    position: relative;
+    border-bottom: 1px solid rgba(128, 128, 128, 1.0);
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    letter-spacing: 6px;
+    text-align: center;
+}
+#alpine-header-logo img {
+    width: 57px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+#alpine-header-links {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+
+    #alpine-header {
+        margin-top: 30px;
+        margin-bottom: 0px;
+        width: 100%;
+    }
+    #alpine-header-nav * {
+        text-align: inherit;
+    }
+    #alpine-header a {
+        line-height: 65px;
+    }
+    #alpine-header-nav {
+        height: 60px;
+    }
+    #alpine-header-logo {
+        letter-spacing: 8px;
+        padding-left: 100px;
+        position: relative;
+        border: none;
+    }
+    #alpine-header-logo img {
+        position: absolute;
+        top: 0px;
+        left: 20px;
+        margin-bottom: 0px;
+    }
+    #alpine-header-links {
+        text-align: right;
+    }
+}
+@media screen and (min-width: 1024px) {
+    #alpine-header a {
+        font-size: 18px;
+        line-height: 65px;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+
+}
+@media screen and (min-width: 1440px) {
+
+}
+
+/* Container -------------------------------------------------- */
+#alpine-container {
+    width: 809px;
+    padding: 0px;
+    width: 340px;
+}
+
+.alpine-content {
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 809px auto;
+    position: relative;
+    background-size: 340px auto;
+}
+
+@media screen and (min-width: 768px) {
+    #alpine-container {
+        width: 809px;
+    }
+
+    .alpine-content {
+        background-size: 809px auto;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #alpine-container {
+        width: 1025px;
+    }
+    .alpine-content {
+        background-size: 1025px auto;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    #alpine-container {
+        width: 1440px;
+    }
+    .alpine-content {
+        background-size: 1440px auto;
+    }
+}
+
+/* Content -------------------------------------------------- */
+.alpine-content section {
+    padding: 25px;
+}
+
+.alpine-content h1,
+.alpine-content h2,
+.alpine-content h3 {
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.alpine-content h1 {
+    font-size: 16px;
+    color: rgba(255, 109, 115, 1.0);
+    letter-spacing: 4px;
+    line-height: 19px;
+    margin: 10px 0 10px 0;
+}
+
+.alpine-content h2 {
+    margin: 10px 0 10px 0;
+    font-size: 20px;
+    color: rgba(255, 109, 115, 1.0);
+    letter-spacing: 4px;
+    line-height: 24px;
+}
+
+.alpine-content h3 {
+    font-size: 10.0px;
+    color: rgba(102, 102, 102, 1.0);
+    letter-spacing: 5px;
+    line-height: 13px;
+}
+
+.alpine-content h4 {
+    font-weight: 600;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #9b9b9b;
+    margin: 20px 0px;
+}
+
+.alpine-content p {
+    font-weight: 600;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 15px;
+    margin: 15px 0px;
+}
+
+.alpine-content .button span {
+    background-color: rgba(255, 110, 116, 1.0);
+    height: 49px;
+    width: 208px;
+    margin: 20px 0 10px 0;
+    border-radius: 24px;
+    color: #FFF;
+    display: inline-block;
+    line-height: 49px;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    text-align: center;
+}
+
+.line-1x,
+.line-2x,
+.line-3x {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.line-1x {
+    height: 7px;
+}
+
+.line-2x {
+    height: 20px;
+}
+
+.line-3x {
+    height: 30px;
+}
+
+.line-light {
+    background-color: rgba(217, 236, 248, 1.0);
+}
+
+.line-dark {
+    background-color: rgba(133, 187, 223, 1.0);
+}
+
+@media screen and (min-width: 768px) {
+    .alpine-content h1 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .alpine-content h3 {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .alpine-content h4 {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .alpine-content p {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .alpine-content section {
+        padding: 25px 40px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .alpine-content h1 {
+        font-size: 36px;
+        line-height: 22px;
+        margin-bottom: 20px;
+    }
+    .alpine-content h3 {
+        font-size: 18px;
+        line-height: 18px;
+        margin-left: 5px;
+        margin-bottom: 20px;
+    }
+
+    .alpine-content h4 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .alpine-content p {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .alpine-content section {
+        padding: 35px 50px;
+    }
+    .alpine-content .button span {
+        width: 397px;
+        height: 65px;
+        font-size: 20px;
+        line-height: 65px;
+        border-radius: 48px;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .alpine-content h1 {
+        font-size: 36px;
+        line-height: 44px;
+        margin-bottom: 20px;
+        letter-spacing: 4px;
+    }
+
+    .alpine-content p {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    /*.alpine-content section {
+        padding: 35px 110px;
+    }*/
+}
+
+
+/* Homepage -------------------------------------------------- */
+#alpine-home {
+    background-image: url('../img/home-mobile.png');
+    min-height: 820px;
+    padding-top: 245px;
+    text-align: center;
+}
+
+#alpine-home section {
+    padding: 35px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #alpine-home {
+        background-image: url('../img/home-tablet.png');
+        min-height: 1100px;
+        padding-top: 650px;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    #alpine-home {
+        background-image: url('../img/home-desktop.png');
+        min-height: 1550px;
+        padding-top: 800px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    #alpine-home {
+        background-image: url('../img/home-desktop-hd.png');
+        min-height: 1750px;
+        padding-top: 950px;
+    }
+    #alpine-home section {
+        padding: 35px 110px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #alpine-home-house {
+        width: 50%;
+        margin-top: 100px;
+        text-align: left;
+    }
+    #alpine-home-house h1,
+    #alpine-home-house p,
+    #alpine-home-house a {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    #alpine-home-house {
+        margin-top: 150px;
+    }
+}
+
+/* About -------------------------------------------------- */
+
+#alpine-about {
+    background-image: url('../img/about-mobile.png');
+    padding-top: 200px;
+}
+
+#alpine-about-summit {
+    border-radius: 10px;
+    border: 3px solid rgba(133, 187, 223, 1.0);
+    padding: 25px 35px;
+    position: relative;
+}
+
+#alpine-about-summit header {
+    height: 130px;
+    
+}
+
+#alpine-about-summit img {
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    width: 146px;
+    height: 117px;
+}
+
+#alpine-about-summit h2 {
+    text-align: center;
+    padding-left: 155px;
+    padding-top: 20px;
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 767px) {
+    #alpine-about-summit {
+        padding-top: 150px;
+        padding-bottom: 90px;
+    }
+
+    #alpine-about-summit h2 {
+        padding-left: 0px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    #alpine-about-summit img {
+        left: auto;
+        top: 25px;
+        right: 80px;
+    }
+
+    #alpine-about-summit a {
+        position: absolute;
+        bottom:35px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #alpine-about {
+        background-image: url('../img/about-tablet.png');
+        padding-top: 300px;
+    }
+
+    #alpine-about section {
+        display: block;
+        width: 100%;
+    }
+
+    #alpine-about-summit h2 {
+        width: 390px;
+        padding-left: 0px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+    }
+
+    #alpine-about-summit img {
+        left: auto;
+        top: 25px;
+        right: 80px;
+    }
+
+    #alpine-about-summit p {
+        width: 390px;
+    }
+
+    #alpine-about-summit a {
+        position: absolute;
+        right: 50px;
+        top: 140px;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    #alpine-about {
+        background-image: url('../img/about-desktop.png');
+        padding-top: 600px;
+    }
+
+    #alpine-about section {
+        display: block;
+        width: 100%;
+    }
+
+    #alpine-about-summit h2 {
+        width: 390px;
+        padding-left: 0px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+    }
+
+    #alpine-about-summit img {
+        left: auto;
+        top: 35px;
+        right: 150px;
+    }
+
+    #alpine-about-summit p {
+        width: 390px;
+    }
+
+    #alpine-about-summit a {
+        position: absolute;
+        right: 35px;
+        top: 160px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    #alpine-about {
+        background-image: url('../img/about-desktop-hd.png');
+        padding-top: 625px;
+    }
+}
+
+
+/* Faq */
+
+#alpine-faq {
+    background-image: url('../img/faq-mobile.png');
+    padding-top: 200px;
+}
+
+#alpine-faq strong {
+    display: block;
+    color: #85BBDF;
+    margin: 0px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+#alpine-faq em {
+    color: #FFD78D;
+    font-style: normal;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #alpine-faq {
+        background-image: url('../img/faq-tablet.png');
+        padding-top: 300px;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    #alpine-faq {
+        background-image: url('../img/faq-desktop.png');
+        padding-top: 350px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    #alpine-faq {
+        background-image: url('../img/faq-desktop-hd.png');
+        padding-top: 350px;
+    }
+}

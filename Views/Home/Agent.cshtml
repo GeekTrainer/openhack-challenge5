@@ -1,0 +1,53 @@
+﻿@model UserViewModel
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Alpine Ski House - Admin</title>
+
+    <link href="./img/favicon.png" rel="shortcut icon" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div id="alpine-container" class="container">
+
+        <header id="alpine-header" class="container-fluid">
+            <nav id="alpine-header-nav" class="row">
+                <div id="alpine-header-logo" class="col-xs-12 col-sm-8">
+                    <img src="./img/logo.png" alt="Alpine Ski House" />
+                    <a href="./index.html">Alpine Ski House</a>
+                </div>
+                <div id="alpine-header-links" class="col-xs-12 col-sm-4 pull-right">
+                    <a href="./About.html">About</a>
+                    <a href="./Faq.html">FAQ</a>
+                </div>
+            </nav>
+        </header>
+
+        <div id="alpine-admin" class="row alpine-content">
+            <hr class="line-3x line-dark" />
+            <hr class="line-2x line-light" />
+            <hr class="line-1x line-light" />
+            <section class="col-xs-12">
+                <header>
+                    <h3>Welcome, @Model.Name</h3>
+                    <h1>Alpine Ski House Agent Dashboard</h1>
+                </header>
+                <div class="section-body">
+                    <!-- Add agent dashboard here -->
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <UserSecretsId>aspnet-auth_test-E4BA4025-D461-4E5D-AD49-BD31F4D11D45</UserSecretsId>
+    <WebProject_DirectoryAccessLevelKey>0</WebProject_DirectoryAccessLevelKey>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\img\about-desktop-hd.png" />
+    <Content Remove="wwwroot\img\about-desktop.png" />
+    <Content Remove="wwwroot\img\about-mobile.png" />
+    <Content Remove="wwwroot\img\about-mountain.png" />
+    <Content Remove="wwwroot\img\about-tablet.png" />
+    <Content Remove="wwwroot\img\faq-desktop-hd.png" />
+    <Content Remove="wwwroot\img\faq-desktop.png" />
+    <Content Remove="wwwroot\img\faq-mobile.png" />
+    <Content Remove="wwwroot\img\faq-tablet.png" />
+    <Content Remove="wwwroot\img\favicon.png" />
+    <Content Remove="wwwroot\img\home-desktop-hd.png" />
+    <Content Remove="wwwroot\img\home-desktop.png" />
+    <Content Remove="wwwroot\img\home-header-mobile.png" />
+    <Content Remove="wwwroot\img\home-mobile.png" />
+    <Content Remove="wwwroot\img\home-tablet.png" />
+    <Content Remove="wwwroot\img\logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\img\about-desktop-hd.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\about-desktop.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\about-mobile.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\about-mountain.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\about-tablet.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\faq-desktop-hd.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\faq-desktop.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\faq-mobile.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\faq-tablet.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.7" />
+    <PackageReference Include="Microsoft.Bot.Builder" Version="4.0.1-preview" />
+    <PackageReference Include="Microsoft.Bot.Builder.Core" Version="4.0.1-preview" />
+    <PackageReference Include="Microsoft.Bot.Builder.Core.Extensions" Version="4.0.1-preview" />
+    <PackageReference Include="Microsoft.Bot.Builder.Integration.AspNet.Core" Version="4.0.1-preview" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.1" />
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\styles.css" />
+    <None Include="wwwroot\img\about-desktop-hd.png" />
+    <None Include="wwwroot\img\about-desktop.png" />
+    <None Include="wwwroot\img\about-mobile.png" />
+    <None Include="wwwroot\img\about-mountain.png" />
+    <None Include="wwwroot\img\about-tablet.png" />
+    <None Include="wwwroot\img\faq-desktop-hd.png" />
+    <None Include="wwwroot\img\faq-desktop.png" />
+    <None Include="wwwroot\img\faq-mobile.png" />
+    <None Include="wwwroot\img\faq-tablet.png" />
+    <None Include="wwwroot\img\favicon.png" />
+    <None Include="wwwroot\img\home-desktop-hd.png" />
+    <None Include="wwwroot\img\home-desktop.png" />
+    <None Include="wwwroot\img\home-header-mobile.png" />
+    <None Include="wwwroot\img\home-mobile.png" />
+    <None Include="wwwroot\img\home-tablet.png" />
+    <None Include="wwwroot\img\logo.png" />
+  </ItemGroup>
+
+</Project>
