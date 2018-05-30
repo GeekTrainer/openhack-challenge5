@@ -60,7 +60,9 @@ namespace auth_test
                 app.UseExceptionHandler("/Home/Error");
             }
 
-            app.UseStaticFiles();
+            app.UseStaticFiles()
+                .UseDefaultFiles()
+                .UseBotFramework();
 
             app.UseAuthentication();
 
