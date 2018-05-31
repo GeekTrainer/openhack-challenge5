@@ -8,7 +8,9 @@ namespace auth_test {
     public class AgentBot : IBot {
         public async Task OnTurn(ITurnContext context) {
             if(context.Activity.Type != ActivityTypes.Message) {
-                await context.SendActivity("Hi there! I'm a sample echo bot");
+                var state = context.GetConversationState<AuthenticationState>();
+                if(state.Authenticated) await context.SendActivity("You are logged in!!");
+                else await context.SendActivity("You are not logged in");
             } else if(context.Activity.Type == ActivityTypes.ConversationUpdate) {
                 await context.SendActivity(new Activity() {
                     Type = "event",
