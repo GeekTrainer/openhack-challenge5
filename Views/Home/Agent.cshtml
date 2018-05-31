@@ -42,12 +42,32 @@
                     <h1>Alpine Ski House Agent Dashboard</h1>
                 </header>
                 <div class="section-body">
+                    <iframe src='https://webchat.botframework.com/embed/openhack-challenge5?s=FvLmWMqQ4m0.cwA.R5A.7BWqdpQ0nxwrWO4r04VVhOj_8luUXZENBs3lWRSvFlo'></iframe>
                     <!-- Add agent dashboard here -->
                 </div>
             </section>
         </div>
 
     </div>
-
+    <script src="https://unpkg.com/botframework-webchat/botchat.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        var botConnection = new BotChat.DirectLine({
+            secret: 'FvLmWMqQ4m0.cwA.R5A.7BWqdpQ0nxwrWO4r04VVhOj_8luUXZENBs3lWRSvFlo'
+        });
+        
+        botConnection.activity$
+            .filter(activity => activity.type === 'event' && activity.name === 'authenticate')
+            .subscribe((activity) => {
+                console.log('attempting auth call');
+                $.get('/api/agentauthentication/authenticate?id=' + activity.text)
+                    .then((data, status) => {
+                        console.log(status);
+                        console.log('call complete');
+                    }, (jqXHR, status, error) => {
+                        console.log(error);
+                    });
+            });
+    </script>
 </body>
 </html>
