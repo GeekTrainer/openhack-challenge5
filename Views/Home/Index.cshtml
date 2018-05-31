@@ -72,9 +72,18 @@
             secret: 'FvLmWMqQ4m0.cwA.R5A.7BWqdpQ0nxwrWO4r04VVhOj_8luUXZENBs3lWRSvFlo'
         });
         
-        $(() => {
-            // get id from bot
-        });
+        botConnection.activity$
+            .filter(activity => activity.type === 'event' && activity.name === 'authenticate')
+            .subscribe((activity) => {
+                console.log('attempting auth call');
+                $.get('/api/agentauthentication/authenticate?id=' + activity.text)
+                    .then((data, status) => {
+                        console.log(status);
+                        console.log('call complete');
+                    }, (jqXHR, status, error) => {
+                        console.log(error);
+                    });
+            });
     </script>
 </body>
 </html>
