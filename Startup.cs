@@ -38,6 +38,8 @@ namespace auth_test
             .AddCookie();
 
             services.AddBot<AgentBot>(options => {
+                var store = new MemoryStorage();
+                options.Middleware.Add(new ConversationState<AuthenticationState>(store));
                 options.CredentialProvider = new ConfigurationCredentialProvider(Configuration);
                 options.Middleware.Add(new CatchExceptionMiddleware<Exception>(async(context, exception) => {
                     await context.TraceActivity("Bot exception", exception);
@@ -47,6 +49,8 @@ namespace auth_test
             });
 
             services.AddMvc();
+
+            services.AddSingleton<IConfiguration>(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

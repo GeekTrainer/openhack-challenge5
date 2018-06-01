@@ -20,22 +20,26 @@ namespace auth_test.Controllers
         [Authorize()]
         public async Task<IActionResult> AuthenticateAsync(string id, IConfiguration configuration)
         {
-            // create an adapter and context to load the state
-            var adapter = new Microsoft.Bot.Builder.Adapters.BotFrameworkAdapter(new ConfigurationCredentialProvider(configuration));
-            var context = new TurnContext(adapter, new Activity() {
-                From = new ChannelAccount(id),
-                Type = "event",
-                Text = "authenticated"
-            });
+            try {
+                // create an adapter and context to load the state
+                var adapter = new Microsoft.Bot.Builder.Adapters.BotFrameworkAdapter(new ConfigurationCredentialProvider(configuration));
+                var context = new TurnContext(adapter, new Activity() {
+                    From = new ChannelAccount(id),
+                    Type = "event",
+                    Text = "authenticated"
+                });
 
-            // load the state and set the Authenticated property
-            var state = context.GetConversationState<AuthenticationState>();
-            state.Authenticated = true;
-            
-            // Message the bot that authentication has taken place
-            var bot = new AgentBot();
-            await bot.OnTurn(context);
-            return Ok();
+                // load the state and set the Authenticated property
+                var state = context.GetConversationState<AuthenticationState>();
+                state.Authenticated = true;
+                
+                // Message the bot that authentication has taken place
+                var bot = new AgentBot();
+                await bot.OnTurn(context);
+                return Ok();
+            } catch (Exception ex) {
+                return BadRequest(ex);
+            }
         }
     }
 }
