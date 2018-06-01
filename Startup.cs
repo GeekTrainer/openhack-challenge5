@@ -43,6 +43,7 @@ namespace auth_test
                     await context.TraceActivity("Bot exception", exception);
                     await context.SendActivity("Sorry, something went wrong");
                 }));
+                // add state registration!!
             });
 
             services.AddMvc();
